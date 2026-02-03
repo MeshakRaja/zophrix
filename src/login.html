@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login Page</title>
-    <script src="backend.js"></script>
+    <script src="login.js"></script>
 </head>
+
 <body>
     <div>
         <img src="./login.jpeg" class="w-200 h-220">
@@ -15,17 +17,22 @@
             <h1 class="font-bold text-5xl pl-200 -mt-130 text-gray-800">Arena</h1>
             <p class="pl-200 mt-3 text-gray-800">Sign in to Your Account</p>
             <form id="loginForm">
-            <div>
-                <label class="text-base pl-200 text-cyan-700 block mt-5">Email</label><br>
-                <input type="email" id="email" placeholder="Enter Your Email" class="text-sm ml-200 border-2 h-9 w-100 rounded-md p-3">
-            </div>
-            <div class="relative ">
-                <label class="text-base pl-200 text-cyan-700 block mt-5">Password</label><br>
-                <input type="password" id="password" placeholder="Enter Your Password" class="text-sm ml-200 border-2 h-9 w-100 rounded-md p-3">
-                <span class="material-icons absolute top-38 left-340 cursor-pointer text-gray-500">visibility_off</span>
-            </div>
-            <p class="text-sm pl-270 mt-5 text-blue-500">forgot Password?</p><br>
-            <button type="submit" id="btn" class="bg-gray-800 ml-200 p-2 w-100 text-white rounded-md cursor-pointer hover:bg-gray-200">Sign In</button>
+                <div>
+                    <label class="text-base pl-200 text-cyan-700 block mt-5">Email</label><br>
+                    <input type="email" id="email" placeholder="Enter Your Email"
+                        class="text-sm ml-200 border-2 h-9 w-100 rounded-md p-3">
+                </div>
+                <div class="relative ">
+                    <label class="text-base pl-200 text-cyan-700 block mt-5">Password</label><br>
+                    <input type="password" id="password" placeholder="Enter Your Password"
+                        class="text-sm ml-200 border-2 h-9 w-100 rounded-md p-3">
+                    <span
+                        class="material-icons absolute top-38 left-340 cursor-pointer text-gray-500">visibility_off</span>
+                </div>
+                <p class="text-sm pl-270 mt-5 text-blue-500">forgot Password?</p><br>
+                <button type="submit" id="btn"
+                    class="bg-gray-800 ml-200 p-2 w-100 text-white rounded-md cursor-pointer hover:bg-gray-200">Sign
+                    In</button>
             </form>
             <p class="pl-235 mt-1 text-gray-500">Or continue with</p><br>
             <div class="flex items-center gap-1 ml-230 mt-3">
@@ -44,4 +51,5 @@
         </div>
     </div>
 </body>
+
 </html>

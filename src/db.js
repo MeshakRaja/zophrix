@@ -18,7 +18,7 @@
 
 //backend
 
-document.addEventListener("DOMContentLoaded", function ()){
+document.addEventListener("DOMContentLoaded", function () {
 
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
@@ -30,4 +30,4 @@ document.addEventListener("DOMContentLoaded", function ()){
     console.log("Email:", email);
     console.log("Password:", password);
   });
-};
+});
