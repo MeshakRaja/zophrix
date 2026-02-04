@@ -15,7 +15,33 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!email || !password) {
                 alert("Please fill in all fields");
             } else {
-                alert("Login clicked! (Check console for values)");
+                // Send credentials to backend
+                fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                })
+                .then(async (res) => {
+                    if (res.ok) {
+                        const data = await res.json();
+                        console.log('Login success:', data);
+                        alert('Login successful');
+                    } else {
+                        let errMsg = 'Login failed';
+                        try {
+                            const err = await res.json();
+                            errMsg = err.message || errMsg;
+                        } catch (e) {}
+                        console.warn('Login error:', res.status, errMsg);
+                        alert(errMsg);
+                    }
+                })
+                .catch((error) => {
+                    console.error('Network/error contacting server:', error);
+                    alert('Could not contact server. Is it running on http://localhost:3000 ?');
+                });
             }
         });
     }
